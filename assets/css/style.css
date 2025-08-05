@@ -493,3 +493,23 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .social a:hover {
   color: #000;
 }
+
+  .btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6c63ff, #4b4efc);
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-back:hover {
+    background: linear-gradient(135deg, #4b4efc, #6c63ff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+  }
+
