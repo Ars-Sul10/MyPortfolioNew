@@ -84,7 +84,7 @@
           {
             name: "PPT",
             link: "https://drive.google.com/file/d/17GTem4hCz1pv6Q7m6h0SmJycQrYIE5qD/view",
-            img: "assets/img/PPT.png"
+            img: "assets/img/PPT.png",
           },
           {
             name: "SCRIPT",
@@ -95,7 +95,7 @@
             name: "DATASET AUDIENCE (CSV)",
             link: "https://drive.google.com/file/d/1eLb96kfzk0TjIGCKqRkR_BKsgXjmkomX/view?usp=sharing",
             img: "assets/img/result.png"
-          }
+          },
         ]
       },
       viz: {
@@ -135,7 +135,18 @@
             </div>
           </a>
         </div>
+        
       `).join('');
+
+      const aboutItem = data.items.find(item => item.about);
+  if (aboutItem) {
+    cardsHTML += `
+      <div class="col-12 mt-4">
+        <h2>About Me</h2>
+        <p>${aboutItem.about}</p>
+      </div>
+    `;
+  }
     } else {
       title.textContent = "Project Not Found";
       content.innerHTML = "<p class='text-center'>Invalid project parameter in URL.</p>";
