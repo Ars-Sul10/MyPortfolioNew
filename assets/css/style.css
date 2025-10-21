@@ -513,3 +513,41 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     text-decoration: none;
   }
 
+/* Custom class to control the maximum height of the logos */
+.logo-standard-height {
+    /* Set a consistent max-height for both images */
+    max-height: 100px; 
+    /* Centers the image horizontally within its container */
+    display: block; 
+    margin: 0 auto;
+}
+
+/* Styling for the job title and dates section */
+.client-info {
+    /* Ensures the content inside is centered (though it should be via parent) */
+    text-align: center;
+    /* Adds a bit of vertical spacing above the text block */
+    margin-top: 1.5rem; 
+}
+
+/* Styling for the Job Title (h4) */
+.client-info h4 {
+    /* Increase font size for prominence */
+    font-size: 10.25 rem; 
+    /* Adjust line height if the title spans two lines */
+    line-height: 1.4; 
+    /* Add space below the title before the dates */
+    margin-bottom: 0.5rem; 
+    /* Set a professional color if needed, e.g., a dark grey */
+    color: #333; 
+}
+
+/* Styling for the Dates (p) */
+.client-info p {
+    /* Increase date font size, but keep it smaller than the title */
+    font-size: 10 rem; 
+    /* Reduce default paragraph margin for a tighter look */
+    margin-bottom: 0; 
+    /* A slightly lighter color for the dates */
+    color: #6c757d; 
+}
