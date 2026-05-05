@@ -35,7 +35,7 @@
 </head>
 <body>
   <div class="container my-3">
-  <a href="da_project_detail.html" class="btn-back">
+  <a href="tw_project_about.html" class="btn-back">
     ← Back to Project Details
   </a>
 </div>
