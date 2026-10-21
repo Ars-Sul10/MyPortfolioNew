@@ -1,8 +1,6 @@
 /**
 * Template Name: MyPortfolio - v4.0.1
-* Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Enhanced for Professional Portfolio UI
 */
 (function() {
   "use strict";
@@ -34,33 +32,57 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Navbar scrolled & Back to top toggle
    */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
+  const toggleScrolled = () => {
+    const navbar = select('.custom-navbar');
+    const backtotop = select('.back-to-top');
+    if (window.scrollY > 40) {
+      if (navbar) navbar.classList.add('scrolled');
+      if (backtotop) backtotop.classList.add('active');
+    } else {
+      if (navbar) navbar.classList.remove('scrolled');
+      if (backtotop) backtotop.classList.remove('active');
+    }
+  };
+
+  window.addEventListener('load', toggleScrolled);
+  window.addEventListener('scroll', toggleScrolled);
+
+  /**
+   * burgerMenu toggle
+   */
+  const burgerMenu = select('.burger')
+  if (burgerMenu) {
+    on('click', '.burger', function(e) {
+      burgerMenu.classList.toggle('active');
+    })
   }
 
   /**
-   * burgerMenu
-   */
-  const burgerMenu = select('.burger')
-  on('click', '.burger', function(e) {
-    burgerMenu.classList.toggle('active');
-  })
-
-  /**
-   * Porfolio isotope and filter
+   * Portfolio isotope and filter
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('#portfolio-grid');
-    if (portfolioContainer) {
+    if (portfolioContainer && typeof Isotope !== 'undefined') {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.item',
+        layoutMode: 'fitRows',
+        percentPosition: true
       });
 
-      let portfolioFilters = select('#filters a', true);
+      // Recalculate layout after all images load
+      const images = portfolioContainer.querySelectorAll('img');
+      images.forEach(img => {
+        if (img.complete) return;
+        img.addEventListener('load', () => {
+          portfolioIsotope.layout();
+        });
+      });
 
-      on('click', '#filters a', function(e) {
+      let portfolioFilters = select('#filters a, .portfolio-filters a', true);
+
+      on('click', '#filters a, .portfolio-filters a', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
           el.classList.remove('active');
@@ -71,28 +93,34 @@
           filter: this.getAttribute('data-filter')
         });
         portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
         });
       }, true);
     }
-
   });
 
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+  window.addEventListener('load', () => {
+    if (select('.testimonials-slider') && typeof Swiper !== 'undefined') {
+      new Swiper('.testimonials-slider', {
+        speed: 700,
+        loop: true,
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: false
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
     }
   });
 
@@ -100,12 +128,14 @@
    * Animation on scroll
    */
   window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
   });
 
-})()
+})();
