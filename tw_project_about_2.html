@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Detail</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .btn-back {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #6c63ff, #4b4efc);
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn-back:hover {
+      background: linear-gradient(135deg, #4b4efc, #6c63ff);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-3">
+  <a href="da_project_detail.html" class="btn-back">
+    ← Back to Project Details
+  </a>
+</div>
+  <div class="container py-5">
+    <h2 class="text-center mb-5" id="project-title">Loading...</h2>
+    <div class="row" id="project-content">
+      <!-- Dynamic content inserted here -->
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let project = params.get('project') || 'sql'; // default to 'sql' if no parameter given
+    const title = document.getElementById('project-title');
+    const content = document.getElementById('project-content');
+
+    const projects = {
+      sql: {
+        title: "KEMENTERIAN ATR/BPN",
+        items: [
+          {
+            name: "Laporan Bulanan",
+            link: "https://drive.google.com/file/d/1CdyCcF0gA5LlnCpCWDPUiXlSkmkdH-xv/view",
+            img: "assets/img/PPT.png"
+          },
+          {
+            name: "Laporan Akhir",
+            link: "da_project_sql_details.html",
+            img: "assets/img/query.png"
+          },
+          {
+            name: "Laporan Pendahuluan",
+            link: "https://drive.google.com/your-sql-result-link",
+            img: "assets/img/result.png"
+          }
+        ]
+      },
+      python: {
+        title: "Python Project",
+        items: [
+          {
+            name: "PPT",
+            link: "https://drive.google.com/file/d/17GTem4hCz1pv6Q7m6h0SmJycQrYIE5qD/view",
+            img: "assets/img/PPT.png",
+          },
+          {
+            name: "SCRIPT",
+            link: "https://drive.google.com/file/d/1eWw1HEQ2JckdnbWDKAhyaatMREpHq_9J/view?usp=sharing",
+            img: "assets/img/python.png"
+          },
+          {
+            name: "DATASET AUDIENCE (CSV)",
+            link: "https://drive.google.com/file/d/1eLb96kfzk0TjIGCKqRkR_BKsgXjmkomX/view?usp=sharing",
+            img: "assets/img/result.png"
+          },
+        ]
+      },
+      viz: {
+        title: "Data Visualization Project",
+        items: [
+          {
+            name: "PPT",
+            link: "https://drive.google.com/file/d/1rMgRR9EUukTFbxakPtj179-MoR_gByOy/view?usp=sharing",
+            img: "assets/img/ppt.png"
+          },
+          {
+            name: "DASHBOARD FILE",
+            link: "https://lookerstudio.google.com/reporting/b460d9e9-b750-4b4f-a431-a09b409e50c3",
+            img: "assets/img/dashboard.png"
+          },
+          {
+            name: "SPREADSHEET DATA (CSV)",
+            link: "https://docs.google.com/spreadsheets/d/1pACA8AA4V_jhfu7Q08QxUbMcb9j0IvonrmbZWKsNPcE/edit?usp=sharing",
+            img: "assets/img/result.png"
+          },
+        ]
+      }
+    };
+
+    if (project in projects) {
+      const data = projects[project];
+      title.textContent = data.title;
+      content.innerHTML = data.items.map(item => `
+        <div class="col-md-6 col-lg-3 mb-4">
+          <a href="${item.link}" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card h-100">
+              <img src="${item.img}" class="card-img-top" alt="${item.name}">
+              <div class="card-body">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">Open the ${item.name} file.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+      `).join('');
+
+      const aboutItem = data.items.find(item => item.about);
+  if (aboutItem) {
+    cardsHTML += `
+      <div class="col-12 mt-4">
+        <h2>About Me</h2>
+        <p>${aboutItem.about}</p>
+      </div>
+    `;
+  }
+    } else {
+      title.textContent = "Project Not Found";
+      content.innerHTML = "<p class='text-center'>Invalid project parameter in URL.</p>";
+    }
+  </script>
+</body>
+</html>
