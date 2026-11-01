@@ -19,6 +19,7 @@
     const isHome = page === '' || page === 'index.html';
     const isAbout = page === 'about.html';
     const isProject = page.includes('project') || page.includes('nextjs');
+    const isCv = page === 'cv.html';
 
     // Build link destinations based on current location
     const prefix = isHome ? '' : 'index.html';
@@ -27,8 +28,9 @@
     const experienceLink = `${prefix}#experience`;
     const skillsLink = `${prefix}#skills`;
     const aboutLink = 'about.html';
-    const cvLink = 'https://drive.google.com/file/d/1YG0CBTh2mdHyaIRCbWvTXhzPyCuhYjBQ/view';
-    const readCvOnline = 'https://drive.google.com/file/d/1YG0CBTh2mdHyaIRCbWvTXhzPyCuhYjBQ/view';
+    const cvLink = 'cv.html';
+    const readCvOnline = 'cv.html';
+    const cvPdfLink = 'docs/CV_Muhammad_Arsyi_Sulthoni_1Page.pdf';
 
     const html = `
   <!-- ======= Collapsible Mobile Navbar ======= -->
@@ -50,9 +52,14 @@
           <p class="mb-0"><i class="bi bi-envelope text-primary me-2"></i><a href="mailto:sulthoniars@gmail.com">sulthoniars@gmail.com</a></p>
         </div>
         <div class="col-md-4 text-md-end">
-          <a href="${readCvOnline}" target="_blank" rel="noopener" class="btn-primary-custom">
+          <a href="${readCvOnline}" class="btn-primary-custom mb-2 d-inline-block">
             <i class="bi bi-file-earmark-pdf"></i> Read My CV Online
           </a>
+          <div>
+            <a href="${cvPdfLink}" download="CV_Muhammad_Arsyi_Sulthoni_1Page.pdf" target="_blank" rel="noopener" class="text-white-50 small text-decoration-underline">
+              <i class="bi bi-download me-1"></i> Direct Download (PDF)
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -78,12 +85,16 @@
         <li><a href="${experienceLink}">Experience</a></li>
         <li><a href="${skillsLink}">Skills</a></li>
         <li><a href="${aboutLink}" class="${isAbout ? 'active' : ''}">About Me</a></li>
+        <li><a href="cv.html" class="${isCv ? 'active' : ''}">CV</a></li>
       </ul>
 
       <!-- Desktop CTA & Mobile Hamburger -->
       <div class="d-flex align-items-center gap-2">
-        <a href="${cvLink}" target="_blank" rel="noopener" class="nav-cta-btn d-none d-sm-inline-flex">
+        <a href="${cvLink}" class="nav-cta-btn d-none d-sm-inline-flex ${isCv ? 'active' : ''}">
           <i class="bi bi-file-earmark-text"></i> View CV
+        </a>
+        <a href="${cvPdfLink}" download="CV_Muhammad_Arsyi_Sulthoni_1Page.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary d-none d-md-inline-flex rounded-pill px-3" title="Direct Download PDF">
+          <i class="bi bi-download"></i>
         </a>
         <button class="navbar-toggler-btn burger" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span></span>
