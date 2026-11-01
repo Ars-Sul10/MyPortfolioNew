@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="100%" stop-color="#141419"/>
+    </linearGradient>
+    <linearGradient id="logoGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="nStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="65%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="300" rx="16" fill="url(#bg)"/>
+  <rect width="480" height="300" rx="16" fill="url(#centerGlow)"/>
+
+  <!-- Subtle Grid Accent -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="60" x2="480" y2="60"/>
+    <line x1="0" y1="120" x2="480" y2="120"/>
+    <line x1="0" y1="180" x2="480" y2="180"/>
+    <line x1="0" y1="240" x2="480" y2="240"/>
+    <line x1="96" y1="0" x2="96" y2="300"/>
+    <line x1="192" y1="0" x2="192" y2="300"/>
+    <line x1="288" y1="0" x2="288" y2="300"/>
+    <line x1="384" y1="0" x2="384" y2="300"/>
+  </g>
+
+  <!-- Next.js Iconic Circle Emblem -->
+  <g transform="translate(240, 125)">
+    <!-- Outer Glow Ring -->
+    <circle r="60" fill="#000000" stroke="#27272a" stroke-width="2"/>
+    <circle r="56" fill="#000000"/>
+
+    <!-- Next.js "N" Logo Icon -->
+    <g transform="translate(-36, -36)">
+      <!-- Left Vertical Bar -->
+      <path d="M 22 18 L 22 54" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+      
+      <!-- Right Vertical Bar -->
+      <path d="M 50 18 L 50 54" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- Diagonal Slash with Fade -->
+      <path d="M 22 20 L 52 56" stroke="url(#nStroke)" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="240" y="222" text-anchor="middle" font-family="'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="22" fill="#ffffff" letter-spacing="3">NEXT.JS</text>
+  <text x="240" y="244" text-anchor="middle" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="600" font-size="12" fill="#94a3b8" letter-spacing="4">FRAMEWORK</text>
+</svg>
+

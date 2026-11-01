@@ -2,75 +2,234 @@
 <html lang="en">
 
 <head>
-      <!-- Vendor CSS Files -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Data Analyst Project Collection | Muhammad Arsyi Sulthoni</title>
+  <meta name="description" content="Data Analyst Project Collection by Muhammad Arsyi Sulthoni - SQL database queries, Python automation & analytics, and interactive BI dashboards.">
+  <meta name="author" content="Muhammad Arsyi Sulthoni">
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGO_YTB.png" rel="icon" type="image/png">
+  <link href="assets/img/LOGO_YTB.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
-<head>
-    <div class="container my-3">
-  <a href="index.html" class="btn-back">
-    ← Back to Portfolio
-  </a>
-</div>
 
-  <meta charset="UTF-8">
-  <title>Data Analyst Project Detail</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .card {
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
-    .card:hover {
-      transform: scale(1.03);
-    }
-    .card img {
-      height: 200px;
-      object-fit: cover;
-    }
-  </style>
-</head>
 <body>
-  <div class="container py-5">
-    <h2 class="text-center mb-5">Data Analyst Project List</h2>
-    <div class="row">
-<!-- Card 1 - MySkill Intensive Bootcamp -->
-<div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-        <a href="da_project_about.html?project=sql" class="item-wrap fancybox">
-          <div class="work-info">
-            <h3>Certification Projects Showcase </h3>
-            <span></span><br>
-            <span>SQL, Python, and Dashboard Projects from MySkill Data Analytics Courses</span>
-              <br>
-            <span>Duration Project : 4 months</span>
-          </div>
-          <img class="img-fluid project-img" src="assets/img/MySkill.jpg">
-        </a>
+
+    <!-- ======= Unified Global Navbar Component ======= -->
+  <div id="navbar-placeholder"></div>
+  <script src="assets/js/navbar.js"></script>
+
+  <!-- Back to Portfolio Bar -->
+  <div class="container pt-3 pb-2">
+    <a href="index.html" class="btn-back">
+      <i class="bi bi-arrow-left"></i> Back to Portfolio
+    </a>
+  </div>
+
+  <main class="section site-portfolio py-5">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-badge"><i class="bi bi-bar-chart-fill"></i> Data Analytics Collection</span>
+        <h1 class="section-title">Data Analyst Project Collection</h1>
+        <p class="section-subtitle">
+          A comprehensive suite of analytics projects covering interactive business intelligence dashboards, Python data automation pipelines, and structured SQL database querying.
+        </p>
       </div>
 
-<!-- Card 2 - Python -->
- <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-        <a href="da_project_about.html?project=yaya" class="item-wrap fancybox">
-          <div class="work-info">
-            <h3>YayaPL1 Channel Data Analyst Project </h3>
-            <span></span><br>
-            <span>SQL, Python, and Dashboard Projects to Analyze Youtube Channel</span>
-            <br>
-            <span>Duration Project : 6 months</span>
+      <!-- Project Cards Grid -->
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1: Analytics Performance Dashboard -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-card-thumb">
+              <span class="project-card-badge badge-data">Business Intelligence</span>
+              <img src="assets/img/DASHBOARD.png" alt="Analytics Performance Dashboard">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <a href="da_project_about.html?project=viz">Analytics Performance Dashboard</a>
+              </h3>
+              <p class="project-card-desc">
+                Interactive visualization dashboard transforming raw dataset metrics into clear visual KPI summaries, performance trends, and business intelligence reports.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Dashboard</span>
+                <span class="project-tag">Data Viz</span>
+                <span class="project-tag">Looker Studio</span>
+                <span class="project-tag">KPIs</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="da_project_about.html?project=viz" class="project-link-btn">
+                  Explore Dashboard <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <img class="img-fluid project-img" src="assets/img/pp_yt_yaya.jpg">
-        </a>
+        </div>
+
+        <!-- Card 2: Python Scripting & Analytics -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-card">
+            <div class="project-card-thumb">
+              <span class="project-card-badge badge-data">Python Automation</span>
+              <img src="assets/img/FIN-PYTHON.png" alt="Python Scripting and Analytics">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <a href="da_project_about.html?project=yaya">Python Scripting &amp; Analytics</a>
+              </h3>
+              <p class="project-card-desc">
+                Automated data processing scripts, YouTube channel performance extraction, and statistical calculation pipelines built with Python.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Automation</span>
+                <span class="project-tag">Data Cleaning</span>
+                <span class="project-tag">Analytics</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="da_project_about.html?project=yaya" class="project-link-btn">
+                  View Python Work <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: SQL Query & Data Preparation -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-card-thumb">
+              <span class="project-card-badge badge-data">Database</span>
+              <img src="assets/img/FIN-SQL.png" alt="SQL Database Query and Data Preparation">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <a href="da_project_sql_details.html">SQL Query &amp; Data Preparation</a>
+              </h3>
+              <p class="project-card-desc">
+                Structured database queries, complex table joins, dataset normalization, and analytical SQL scripts for business intelligence and reporting.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">PostgreSQL</span>
+                <span class="project-tag">Data Cleaning</span>
+                <span class="project-tag">SQL Joins</span>
+                <span class="project-tag">Queries</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="da_project_sql_details.html" class="project-link-btn">
+                  View SQL Queries <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: MySkill Bootcamp Certification Showcase -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+          <div class="project-card">
+            <div class="project-card-thumb">
+              <span class="project-card-badge badge-data">Bootcamp Showcase</span>
+              <img src="assets/img/MySkill.jpg" alt="Certification Projects Showcase">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <a href="da_project_about.html?project=sql">Certification Projects Showcase</a>
+              </h3>
+              <p class="project-card-desc">
+                Curated portfolio and case studies from MySkill Intensive Data Analytics Bootcamp covering real-world business datasets, queries, and presentations.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">MySkill</span>
+                <span class="project-tag">Bootcamp</span>
+                <span class="project-tag">Case Studies</span>
+                <span class="project-tag">Reporting</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="da_project_about.html?project=sql" class="project-link-btn">
+                  View Showcase <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: YayaPL1 Channel Data Analysis -->
+        <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-card-thumb">
+              <span class="project-card-badge badge-data">Channel Analytics</span>
+              <img src="assets/img/pp_yt_yaya.jpg" alt="YayaPL1 Channel Data Analyst Project">
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-card-title">
+                <a href="da_project_about.html?project=yaya">YayaPL1 Channel Analytics</a>
+              </h3>
+              <p class="project-card-desc">
+                In-depth YouTube analytics examining audience engagement, watch time trends, video performance, and subscriber growth dynamics.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">YouTube Data</span>
+                <span class="project-tag">Audience Growth</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">Metrics</span>
+              </div>
+              <div class="project-card-footer">
+                <a href="da_project_about.html?project=yaya" class="project-link-btn">
+                  View Channel Project <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-<!-- Card 3 - Data Visualization -->
+      <!-- Bottom Return Button -->
+      <div class="text-center mt-5" data-aos="fade-up">
+        <a href="index.html" class="btn-primary-custom">
+          <i class="bi bi-arrow-left"></i> Return to Main Portfolio
+        </a>
+      </div>
 
     </div>
-  </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer py-4 border-top bg-white">
+    <div class="container text-center text-muted small">
+      &copy; 2026 <strong>Muhammad Arsyi Sulthoni</strong>. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
 </body>
+
 </html>

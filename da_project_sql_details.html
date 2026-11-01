@@ -2,33 +2,37 @@
 <html lang="en">
 
 <head>
-      <!-- Vendor CSS Files -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>SQL Query &amp; Data Preparation | Muhammad Arsyi Sulthoni</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/LOGO_YTB.png" rel="icon" type="image/png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-</head>
-<head>
-    <div class="container my-3">
-  <a href="da_project_about.html" class="btn-back">
-    ← Back to SQL Project
-  </a>
-</div>
 
-  <meta charset="UTF-8">
-  <title>SQL Query</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     .card {
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid var(--color-border);
+      overflow: hidden;
     }
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
     .card img {
       height: 200px;
@@ -36,49 +40,82 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="container py-5">
-    <h2 class="text-center mb-5">Query List</h2>
-    <div class="row">
-<!-- Card 1 -->
-<div class="col-md-4 mb-4">
-  <a href="https://drive.google.com/file/d/1bpq3QEANjjwe9UbujUkM_XhwktR6AUxX/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="card">
-      <img src="assets/img/FIN-SQL.png" class="card-img-top" alt="Project 1">
-      <div class="card-body">
-        <h5 class="card-title">Data Preparation</h5>
-        <p class="card-text">SQL</p>
-      </div>
-    </div>
-  </a>
-</div>
+    <!-- ======= Unified Global Navbar Component ======= -->
+  <div id="navbar-placeholder"></div>
+  <script src="assets/js/navbar.js"></script>
 
-<!-- Card 2 -->
-<div class="col-md-4 mb-4">
-  <a href="https://drive.google.com/file/d/1mMZXnPy887LIaZ8pHxHRXFwzEc8E7fLO/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="card">
-      <img src="assets/img/FIN-PYTHON.png" class="card-img-top" alt="Project 2">
-      <div class="card-body">
-        <h5 class="card-title">Nomor 1-5</h5>
-        <p class="card-text">SQL</p>
-      </div>
-    </div>
-  </a>
-</div>
-
-<!-- Card 3 - Data Visualization -->
-<div class="col-md-4 mb-4">
-  <a href="https://drive.google.com/file/d/1b75ad7Bfw1eOErNqskHU2TXrPRkVA_Zi/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
-    <div class="card">
-      <img src="assets/img/FIN-DATVIZ.png" class="card-img-top" alt="Project 3">
-      <div class="card-body">
-        <h5 class="card-title">Problem Understanding</h5>
-        <p class="card-text">SQL</p>
-      </div>
-    </div>
-  </a>
-</div>
-    </div>
+  <!-- Back to Data Analyst Projects -->
+  <div class="container pt-3 pb-2">
+    <a href="da_project_detail.html" class="btn-back">
+      <i class="bi bi-arrow-left"></i> Back to Data Analyst Collection
+    </a>
   </div>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <span class="section-badge"><i class="bi bi-database"></i> SQL Repository</span>
+        <h1 class="section-title">SQL Query &amp; Data Preparation</h1>
+        <p class="section-subtitle">
+          Structured database queries, complex table joins, dataset normalization, and analytical scripts.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://drive.google.com/file/d/1bpq3QEANjjwe9UbujUkM_XhwktR6AUxX/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card h-100">
+              <img src="assets/img/FIN-SQL.png" class="card-img-top" alt="Data Preparation">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Data Preparation</h5>
+                <p class="card-text text-muted small">SQL dataset preparation &amp; cleansing queries</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="150">
+          <a href="https://drive.google.com/file/d/1mMZXnPy887LIaZ8pHxHRXFwzEc8E7fLO/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card h-100">
+              <img src="assets/img/FIN-PYTHON.png" class="card-img-top" alt="Nomor 1-5">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Nomor 1-5 Analysis</h5>
+                <p class="card-text text-muted small">Comprehensive SQL analytical problem solving</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="https://drive.google.com/file/d/1b75ad7Bfw1eOErNqskHU2TXrPRkVA_Zi/view?usp=sharing" target="_blank" style="text-decoration: none; color: inherit;">
+            <div class="card h-100">
+              <img src="assets/img/FIN-DATVIZ.png" class="card-img-top" alt="Problem Understanding">
+              <div class="card-body">
+                <h5 class="card-title fw-bold">Problem Understanding</h5>
+                <p class="card-text text-muted small">Business logic and SQL query normalization</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer py-4 border-top bg-white">
+    <div class="container text-center text-muted small">
+      &copy; 2026 <strong>Muhammad Arsyi Sulthoni</strong>. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>

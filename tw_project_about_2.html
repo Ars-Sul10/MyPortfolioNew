@@ -32,8 +32,19 @@
       transform: translateY(-3px);
     }
   </style>
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+  <!-- ======= Unified Global Navbar Component ======= -->
+  <div id="navbar-placeholder"></div>
+  <script src="assets/js/navbar.js"></script>
+
   <div class="container my-3">
   <a href="da_project_detail.html" class="btn-back">
     ← Back to Project Details
@@ -147,5 +158,6 @@
       content.innerHTML = "<p class='text-center'>Invalid project parameter in URL.</p>";
     }
   </script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
