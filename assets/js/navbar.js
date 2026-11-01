@@ -27,8 +27,8 @@
     const experienceLink = `${prefix}#experience`;
     const skillsLink = `${prefix}#skills`;
     const aboutLink = 'about.html';
-    const cvLink = 'https://drive.google.com/file/d/1YG0CBTh2mdHyaIRCbWvTXhzPyCuhYjBQ/view?usp=sharing';
-    const readCvOnline = 'https://drive.google.com/file/d/1j3ZpN1cozGoVXOqOxxK4GUiekuj-Y75X/view?usp=sharing';
+    const cvLink = 'https://drive.google.com/file/d/1YG0CBTh2mdHyaIRCbWvTXhzPyCuhYjBQ/view';
+    const readCvOnline = 'https://drive.google.com/file/d/1YG0CBTh2mdHyaIRCbWvTXhzPyCuhYjBQ/view';
 
     const html = `
   <!-- ======= Collapsible Mobile Navbar ======= -->

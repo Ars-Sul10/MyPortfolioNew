@@ -976,11 +976,11 @@ p {
 .skill-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.55rem 0.85rem;
+  gap: 0.65rem;
+  padding: 0.65rem 0.95rem;
   background: var(--color-bg-subtle);
   border-radius: var(--radius-md);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--color-dark);
   transition: var(--transition-fast);
